@@ -1,0 +1,18 @@
+{
+    "name": "zwernemann/module-withdrawal-hyva",
+    "description": "Hyva Theme compatibility for zwernemann/module-withdrawal",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": ["OSL-3.0"],
+    "require": {
+        "php": ">=7.4",
+        "zwernemann/module-withdrawal": ">=1.0.0",
+        "hyva-themes/magento2-theme-module": "*"
+    },
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "Zwernemann\\WithdrawalHyva\\": ""
+        }
+    }
+}
