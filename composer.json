@@ -6,7 +6,7 @@
     "license": ["OSL-3.0"],
     "require": {
         "php": ">=7.4",
-        "zwernemann/module-withdrawal": ">=1.0.0",
+        "run-as-root/module-withdrawal": "*",
         "hyva-themes/magento2-theme-module": "*"
     },
     "autoload": {
