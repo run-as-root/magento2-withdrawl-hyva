@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+    Wire the withdrawal entry button into the Hyvä-named container.
+
+    The base module writes the button to sales.order.info.buttons, which
+    is Luma's block name. Hyvä declares the same row as sales.order.buttons,
+    so the upstream injection silently no-ops on this stack.
+
+    The active theme's buttons.phtml calls $block->getChildHtml() at the
+    end of its render, so attaching the button as a child block here lands
+    it as a sibling next to Reorder and Print Order without touching any
+    templates.
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="sales.order.buttons">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="zwernemann.withdrawal.order.view.button"
+                   template="Zwernemann_Withdrawal::button.phtml"/>
+        </referenceBlock>
+    </body>
+</page>
